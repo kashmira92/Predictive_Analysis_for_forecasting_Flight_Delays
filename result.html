@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/css/result.css">
+</head>
+
+<body>
+    <div class="signup-container">
+        <div class="left-container">
+            <img src="/static/flight.jpeg" />
+        </div>
+        <div class="right-container">
+            <header>
+                <h1>Flight delay predictions! </h1>
+                <div class="set">
+                    <div class="prediction-desc-wrapper">
+                        <!-- <p class="prediction-label">Prediction</p> -->
+                        <p class="prediction-desc">
+                            {% if output==1 %}
+                            Flight delayed!!
+                            {% else %}
+                            FLight is on time!!
+                            {% endif %}
+
+                        </p>
+                    </div>
+                </div>
+            </header>
+            <div class="predict-btn">
+                <div class="set">
+                    <button onclick="redirectToNewPage()" id="next">Predict another flight status</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function redirectToNewPage() {
+        window.location.href = "/";
+    }
+</script>
+
+</html>
